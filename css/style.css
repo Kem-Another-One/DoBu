@@ -1,0 +1,258 @@
+/* DoBu Martial Arts - custom styles */
+:root{
+    --dobu-black:#111111;
+    --dobu-dark:#242424;
+    --dobu-amber:#f2b705;
+    --dobu-amber-light:#ffd84a;
+    --dobu-white:#ffffff;
+    --dobu-grey:#d7d7d7;
+}
+
+html{scroll-behavior:smooth;}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f5f5f5;
+    color:#1f1f1f;
+}
+
+.skip-link{
+    position:absolute;
+    left:-9999px;
+    top:0;
+    background:var(--dobu-white);
+    color:var(--dobu-black);
+    padding:.75rem 1rem;
+    z-index:2000;
+}
+.skip-link:focus{left:1rem;top:1rem;}
+
+.bg-dobu-black{background-color:var(--dobu-black)!important;}
+.bg-dobu-red{background-color:var(--dobu-amber)!important;color:var(--dobu-black)!important;}
+.text-dobu-red{color:#9a6b00!important;}
+.border-dobu-red{border-color:var(--dobu-amber)!important;}
+
+.navbar-brand{
+    font-weight:800;
+    letter-spacing:.5px;
+}
+.brand-mark{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:40px;
+    height:40px;
+    margin-right:.55rem;
+    border:2px solid var(--dobu-white);
+    border-radius:50%;
+    color:var(--dobu-white);
+    background:var(--dobu-amber);
+    color:var(--dobu-black);
+    font-size:.9rem;
+}
+.navbar .nav-link{color:#f2f2f2!important;border-bottom:2px solid transparent;}
+.navbar .nav-link:hover,
+.navbar .nav-link:focus,
+.navbar .nav-link.active{color:var(--dobu-amber)!important;border-bottom-color:var(--dobu-amber);}
+
+.btn-dobu{
+    background:var(--dobu-amber);
+    color:var(--dobu-black);
+    border:1px solid var(--dobu-amber);
+}
+.btn-dobu:hover,.btn-dobu:focus{
+    background:var(--dobu-amber-light);
+    color:var(--dobu-black);
+    border-color:var(--dobu-amber-light);
+}
+.btn-outline-dobu{
+    border:1px solid var(--dobu-black);
+    color:var(--dobu-black);
+}
+.btn-outline-dobu:hover,.btn-outline-dobu:focus{
+    background:var(--dobu-black);
+    color:var(--dobu-amber);
+}
+
+.hero{
+    min-height:620px;
+    display:flex;
+    align-items:center;
+    background:linear-gradient(120deg,#050505 0%,#111 62%,#4a3900 100%);
+    color:var(--dobu-white);
+}
+.hero h1{font-size:clamp(2.6rem,6vw,5.3rem);font-weight:800;line-height:.98;}
+.hero .lead{max-width:680px;color:#efefef;}
+.hero-kicker{letter-spacing:.18rem;text-transform:uppercase;color:var(--dobu-amber-light);font-weight:700;}
+
+.page-hero{
+    padding:5.5rem 0 4rem;
+    color:var(--dobu-white);
+    background:linear-gradient(120deg,var(--dobu-black) 0%,#151515 55%,#4a3900 100%);
+}
+.page-hero h1{font-weight:800;}
+
+.section-title{font-weight:800;position:relative;padding-bottom:.8rem;margin-bottom:1.5rem;}
+.section-title:after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:70px;
+    height:4px;
+    background:var(--dobu-amber);
+}
+.section-title.text-center:after{left:50%;transform:translateX(-50%);}
+
+.feature-card,.martial-card,.price-card,.coach-card{
+    height:100%;
+    border:0;
+    border-top:4px solid var(--dobu-amber);
+    box-shadow:0 8px 22px rgba(0,0,0,.08);
+}
+.feature-number{
+    width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    background:var(--dobu-amber);color:var(--dobu-black);font-weight:800;margin-bottom:1rem;
+}
+
+.visual-card{
+    overflow:hidden;
+    min-height:260px;
+    border-radius:.75rem;
+    background:#111;
+    box-shadow:0 12px 30px rgba(0,0,0,.15);
+}
+.visual-card img{width:100%;height:100%;object-fit:cover;display:block;}
+
+.dark-section{background:var(--dobu-black);color:var(--dobu-white);}
+.dark-section .text-muted{color:#c6c6c6!important;}
+
+.table-dobu thead th{background:var(--dobu-black);color:var(--dobu-amber);white-space:nowrap;}
+.table-dobu td,.table-dobu th{vertical-align:middle;}
+.table-dobu tbody tr:nth-child(even){background:#f1f1f1;}
+
+.price-card{position:relative;overflow:hidden;}
+.price-value{font-size:2.4rem;font-weight:800;}
+
+.coach-image{
+    width:92px;height:92px;border-radius:50%;object-fit:cover;border:4px solid var(--dobu-amber);background:#222;
+}
+
+.form-panel{
+    background:#fff;border-radius:.75rem;box-shadow:0 10px 28px rgba(0,0,0,.10);padding:1.5rem;
+}
+.account-status{border-left:5px solid var(--dobu-amber);background:#fff6d7;padding:1rem;border-radius:.35rem;}
+.order-summary{padding:1rem;border:1px solid #dedede;border-left:4px solid var(--dobu-amber);border-radius:.4rem;background:#fafafa;}
+.form-panel fieldset{border-top:1px solid #e5e5e5;padding-top:1rem;}
+
+.community-post{border-left:4px solid var(--dobu-amber);background:#fff;padding:1rem;margin-bottom:.8rem;border-radius:.35rem;}
+
+.contact-icon{
+    width:42px;height:42px;border-radius:50%;background:var(--dobu-amber);color:var(--dobu-black);
+    display:inline-flex;align-items:center;justify-content:center;font-weight:800;
+}
+
+.footer{background:#050505;color:#cfcfcf;}
+.footer a{color:#fff;text-decoration:none;}
+.footer a:hover,.footer a:focus{color:var(--dobu-amber-light);text-decoration:underline;}
+
+:focus-visible{outline:3px solid var(--dobu-amber);outline-offset:3px;}
+
+@media (max-width: 767.98px){
+    .hero{min-height:540px;text-align:center;}
+    .hero .lead{margin-left:auto;margin-right:auto;}
+    .section-title:after{left:50%;transform:translateX(-50%);}
+    .section-title{text-align:center;}
+    .page-hero{text-align:center;padding:4.5rem 0 3rem;}
+}
+
+
+/* Simple signs used instead of photos */
+.hero-sign{
+    width:260px;
+    height:260px;
+    border:4px solid rgba(255,255,255,.9);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:8rem;
+    background:rgba(0,0,0,.22);
+    box-shadow:0 16px 38px rgba(0,0,0,.28);
+}
+
+.sign-panel{
+    min-height:260px;
+    border-radius:.75rem;
+    background:linear-gradient(135deg,#0b0b0b,#1a1a1a 62%,#4a3900);
+    color:#fff;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:.55rem;
+    box-shadow:0 12px 30px rgba(0,0,0,.15);
+}
+.sign-panel span{font-size:5.5rem;line-height:1;}
+.sign-panel small{font-size:1rem;font-weight:700;letter-spacing:.08rem;text-transform:uppercase;}
+.sign-panel.compact{min-height:210px;}
+
+.martial-sign{
+    min-height:165px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(135deg,#0d0d0d,#4a3900);
+    color:#fff;
+    font-size:4.6rem;
+}
+
+.coach-sign{
+    width:92px;
+    height:92px;
+    min-width:92px;
+    border-radius:50%;
+    border:4px solid var(--dobu-amber);
+    background:#171717;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:2.8rem;
+}
+
+@media (max-width: 767.98px){
+    .sign-panel{min-height:210px;}
+    .sign-panel span{font-size:4.5rem;}
+}
+
+
+/* Timetable heading */
+.table-dobu caption.timetable-caption{
+    caption-side:top;
+    text-align:center;
+    font-weight:800;
+    font-size:1.15rem;
+    color:var(--dobu-black)!important;
+    padding:.5rem 0 1rem;
+}
+
+/* Card hover effect for instructors and memberships */
+.coach-card,.price-card{
+    transition:transform .2s ease, box-shadow .2s ease, background-color .2s ease;
+}
+.coach-card:hover,.coach-card:focus-within,.price-card:hover,.price-card:focus-within{
+    transform:translateY(-6px);
+    background:#f8e9eb;
+    box-shadow:0 14px 30px rgba(0,0,0,.14);
+}
+
+
+/* Photos used on the main pages */
+.hero-photo{width:100%;max-width:440px;height:360px;overflow:hidden;border:4px solid rgba(255,255,255,.9);border-radius:1rem;box-shadow:0 16px 38px rgba(0,0,0,.28);}
+.hero-photo img,.sign-panel img,.martial-sign img{width:100%;height:100%;object-fit:cover;display:block;}
+.sign-panel{overflow:hidden;padding:0;}
+.sign-panel img{min-height:210px;}
+.martial-sign{overflow:hidden;padding:0;}
+.martial-sign img{height:165px;}
+.coach-image{flex:0 0 92px;}
+@media (max-width:767.98px){.hero-photo{height:240px;max-width:100%;}.hero{padding:2rem 0;}}
